@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react'
 import Wrapper from "../global/wrapper";
 import Icons from "../global/icons";
@@ -41,7 +43,7 @@ const Hero = () => {
 
               <Container delay={0.3}>
                 <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
-                  <Link href="/projects">
+                  <Link href="/algae">
                     <Button size="lg">
                       Detect Algae
                     </Button>

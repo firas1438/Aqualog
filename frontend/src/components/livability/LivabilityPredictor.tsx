@@ -154,8 +154,8 @@ export function LivabilityPredictor() {
         </Container>
         <Container delay={0.1} className="w-full">
           <p className="mt-3 max-w-2xl text-pretty text-muted-foreground sm:mt-4">
-            Enter your sample measurements. We send them to the model and return a quality class
-            with confidence and class probabilities.
+            Assess seawater livability from water quality measurements. The model predicts habitat suitability 
+            and algal bloom risk based on temperature, salinity, pH, and light penetration.
           </p>
         </Container>
       </div>

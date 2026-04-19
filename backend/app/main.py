@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from app.routers import predict
+from app.routers import predict, segment
 
 app = FastAPI(
     title="Water Quality API",
@@ -21,6 +21,7 @@ app.add_middleware(
 )
 
 app.include_router(predict.router, prefix="/api/v1", tags=["prediction"])
+app.include_router(segment.router, prefix="/api/v1", tags=["segmentation"])
 
 
 @app.get("/")

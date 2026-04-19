@@ -5,7 +5,7 @@ export const NAV_LINKS = [
     },
     {
         name: "Satellite",
-        link: "/projects",
+        link: "/algae",
     },
 ];
 

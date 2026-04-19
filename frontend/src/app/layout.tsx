@@ -1,10 +1,11 @@
+
 import { base, heading } from "@/constants/fonts";
 import { cn } from "@/lib";
-import "@/styles/globals.css";
 import { generateMetadata } from "@/utils";
 import { Toaster } from "@/components/ui/toaster";
 import Navbar from "@/components/home/navbar";
 import Footer from "@/components/home/footer";
+import "./globals.css";
 
 export const metadata = generateMetadata();
 

@@ -56,8 +56,13 @@ const Navbar = () => {
           <Container animation="fadeLeft" delay={0.1}>
             <div className="flex items-center gap-x-4">
               <Link href="/livability" className="lg:block"> {/* className="lg:block hidden" */}
+                <Button size="md" >
+                  Test Livability
+                </Button>
+              </Link>
+              <Link href="/algae" className="lg:block"> {/* className="lg:block hidden" */}
                 <Button size="md" variant="outline">
-                  Get Started
+                  Algae Detection
                 </Button>
               </Link>
               {/* <div className="lg:hidden">

@@ -52,7 +52,7 @@ const CTA = () => {
                         </span>
                       </Button>
                     </Link>
-                    <Link href="/projects" className="block">
+                    <Link href="/algae" className="block">
                       <Button size="lg" className="w-full justify-start gap-3 h-auto py-3">
                         <Satellite className="size-5 shrink-0 text-primary-foreground/90" aria-hidden />
                         <span className="text-left">
