@@ -1,8 +1,8 @@
 import { base, heading } from "./fonts";
-import { NAV_LINKS } from "./links";
+import { nav_links } from "./links";
 
 export {
     base,
     heading,
-    NAV_LINKS,
+    nav_links,
 }

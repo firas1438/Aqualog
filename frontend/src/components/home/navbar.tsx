@@ -9,44 +9,44 @@ import Container from "../global/container";
 import Icons from "../global/icons";
 import Wrapper from "../global/wrapper";
 import MobileMenu from "./mobile-menu";
-import { NAV_LINKS } from "@/constants";
+import { nav_links } from "@/constants";
 import { AnimatePresence } from "framer-motion";
 
 
 const Navbar = () => {
 
-    const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 10) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
-        };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
 
-        window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-    return (
-      <header className={cn( "fixed top-0 inset-x-0 z-50 w-full h-16 transition-all duration-300", isScrolled ? "bg-background/50 backdrop-blur-md" : "bg-transparent", )} >
-        <Wrapper className="flex items-center justify-between">
-          {/* logo */}
-          <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} >
-            <Link href="/" className="flex items-center gap-2">
-              <Icons.logo className="w-max h-6" />
-            </Link>
-          </motion.div>
+  return (
+    <header className={cn("fixed top-0 inset-x-0 z-50 w-full h-16 transition-all duration-300", isScrolled ? "bg-background/50 backdrop-blur-md" : "bg-transparent",)} >
+      <Wrapper className="flex items-center justify-between">
+        {/* logo */}
+        <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} >
+          <Link href="/" className="flex items-center gap-2">
+            <Icons.logo className="w-max h-6" />
+          </Link>
+        </motion.div>
 
-          {/* links */}
-          {/* <div className="hidden lg:flex flex-row flex-1 absolute inset-0 items-center justify-center w-max mx-auto gap-x-3 text-sm text-muted-foreground font-medium">
+        {/* links */}
+        {/* <div className="hidden lg:flex flex-row flex-1 absolute inset-0 items-center justify-center w-max mx-auto gap-x-3 text-sm text-muted-foreground font-medium">
             <AnimatePresence>
-              {NAV_LINKS.map((link, index) => (
+              {nav_links.map((link, index) => (
                 <Container key={index} animation="fadeDown" delay={0.1 * index}>
                   <div className="relative">
                     <Link href={link.link} className="hover:text-foreground transition-all duration-500 px-1.5" >
@@ -57,24 +57,24 @@ const Navbar = () => {
               ))}
             </AnimatePresence>
           </div> */}
-          
-          {/* buttons */}
-          <Container animation="fadeLeft" delay={0.1}>
-            <div className="flex items-center gap-x-4">
-              {/* Get started */}
-              <Link href="/features" className="lg:block hidden"> 
-                <Button size="md" variant="outline">
-                  Get Started
-                </Button>
-              </Link>
-              <div className="lg:hidden">
-                <MobileMenu />
-              </div>
+
+        {/* buttons */}
+        <Container animation="fadeLeft" delay={0.1}>
+          <div className="flex items-center gap-x-4">
+            {/* Get started */}
+            <Link href="/features" className="lg:block hidden">
+              <Button size="md" variant="outline">
+                Get Started
+              </Button>
+            </Link>
+            <div className="lg:hidden">
+              <MobileMenu />
             </div>
-          </Container>
-        </Wrapper>
-      </header>
-    );
+          </div>
+        </Container>
+      </Wrapper>
+    </header>
+  );
 };
 
 export default Navbar;

@@ -1,4 +1,4 @@
-export const NAV_LINKS = [
+export const nav_links = [
     {
         name: "Water Livability",
         link: "/features/livability",

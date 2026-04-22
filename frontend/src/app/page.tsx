@@ -6,15 +6,15 @@ import MarqueeSlide from "@/components/home/marquee";
 
 
 const HomePage = () => {
-    return (
-      <div className="w-full relative flex flex-col pt-16">
-        <Hero />
-        <MarqueeSlide />
-        <HowItWorks />
-        <Faq />
-        <CTA />
-      </div>
-    );
+  return (
+    <div className="w-full relative flex flex-col pt-16">
+      <Hero />
+      <MarqueeSlide />
+      <HowItWorks />
+      <Faq />
+      <CTA />
+    </div>
+  );
 };
 
 export default HomePage;
